@@ -1,0 +1,54 @@
+{
+  "name": "Jokes",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "log:android": "react-native log-android",
+    "log:ios": "react-native log-ios",
+    "lint": "eslint --ext .js,.jsx src",
+    "can-i-push": "yarn check --integrity && yarn run lint && yarn test",
+    "prepush": "yarn run can-i-push",
+    "postinstall": "react-native link",
+    "nuke": "yarn run nuke:native && yarn run nuke:node",
+    "nuke:android": "rm -rf android/build",
+    "nuke:ios": "rm -rf ios/build",
+    "nuke:native": "yarn run nuke:ios && yarn run nuke:android",
+    "nuke:node": "rm -rf node_modules",
+    "nuke:the-big-one": "yarn run nuke && git reset HEAD --hard && yarn install"
+  },
+  "dependencies": {
+    "react": "16.2.0",
+    "react-native": "0.52.2",
+    "react-navigation": "^1.0.0-beta.27",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-jest": "22.1.0",
+    "babel-preset-react-native": "4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-react-native": "^3.1.0",
+    "eslint-watch": "^3.1.3",
+    "husky": "^0.15.0-rc.3",
+    "jest": "22.1.4",
+    "jest-fetch-mock": "^1.4.1",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "16.2.0",
+    "redux-mock-store": "^1.5.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

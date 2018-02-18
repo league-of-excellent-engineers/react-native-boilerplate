@@ -1,0 +1,45 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb"],
+    "plugins": ["import", "jsx-a11y", "react", "react-native"],
+    "rules": {
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "never"
+        }],
+        "func-names": ["error", "as-needed"],
+        "func-style": ["warn", "declaration", { "allowArrowFunctions": true }],
+        "indent": ["error", 4],
+        "no-nested-ternary": ["warn"],
+        "no-param-reassign": ["error", { "props": false }],
+        "no-underscore-dangle": ["off"],
+        "no-undef": ["warn"],
+        "object-shorthand": ["off", "methods"],
+        "quote-props": ["error", "as-needed", {
+            "keywords": false,
+            "unnecessary": true,
+            "numbers": true
+        }],
+        "import/exports-last": ["error"],
+        "import/newline-after-import": ["error", { "count": 2 }],
+        "import/no-named-as-default": ["warn"],
+        "import/order": ["error", { "newlines-between": "never" }],
+        "import/prefer-default-export": ["off"],
+        "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "react/prop-types": ["error", { "skipUndeclared": true }],
+        "react/require-optimization": ["error"],
+        "react-native/no-unused-styles": ["error"],
+        "react-native/split-platform-components": ["error"],
+        "react-native/no-inline-styles": ["error"],
+        "react-native/no-color-literals": ["error"]
+    },
+    "globals": {
+        "alert": false,
+        "fetch": false
+    }
+}
