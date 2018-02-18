@@ -8,7 +8,7 @@ const jokesApi = store => next => (action) => {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
-                'User-Agent': 'RapGodMobile (adamgcoulon@gmail.com)',
+                'User-Agent': 'LoEE (adamgcoulon@gmail.com)',
             },
         };
 
